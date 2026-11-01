@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Students | SkillSwap</title>
+
+    <!-- Explore Page CSS -->
+    <link rel="stylesheet" href="/skillswapModify/css/explore.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.
+    0com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="/skillswapModify/js/auth.js" defer></script>
+    <script src="/skillswapModify/js/explore.js" defer></script>
+</head>
+
+<body>
+
+    <div class="explore-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>Skill<span>Swap</span></h2>
+            </div>
+
+            <div class="sidebar-profile">
+                <div class="profile-avatar" id="sidebarAvatar">S</div>
+                <h3 id="sidebarName">Student Name</h3>
+                <p>Student Account</p>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html">
+                    <span>⌂</span> Overview
+                </a>
+
+                <a href="dashboard.html">
+                    <span>✦</span> My Skills
+                </a>
+
+                <a href="explore.html" class="active">
+                    <span>⌕</span> Explore Students
+                </a>
+
+                <a href="dashboard.html">
+                    <span>▤</span> Activity
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="index.html">← Back to Home</a>
+                <button id="logoutBtn">Logout</button>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <div>
+                    <p>SkillSwap Student Portal</p>
+                    <h2>Explore Students</h2>
+                </div>
+
+                <div class="topbar-profile">
+                    <div class="profile-avatar" id="topbarAvatar">S</div>
+                    <span id="topbarName">Student</span>
+                </div>
+
+            </header>
+
+
+            <!-- WELCOME SECTION -->
+            <section class="explore-welcome">
+
+                <div>
+                    <p class="welcome-label">BUILD YOUR NETWORK</p>
+
+                    <h1>Find Your Next <span>Learning Partner</span></h1>
+
+                    <p>
+                        Connect with talented students, exchange skills,
+                        and learn something new together.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- SEARCH SECTION -->
+            <section class="search-section">
+
+                <div class="search-heading">
+                    <h2>Discover Students</h2>
+                    <p>Find students who can teach what you want to learn.</p>
+                </div>
+
+                <div class="search-bar">
+
+                    <input
+                        type="text"
+                        id="studentSearch"
+                        placeholder="Search by name, college, or skill..."
+                    >
+
+                    <button id="searchBtn">Search</button>
+
+                </div>
+
+
+                <!-- FILTERS -->
+                <div class="filter-container">
+
+                    <select id="departmentFilter">
+                        <option value="">All Departments</option>
+                        <option value="CSE">Computer Science</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="ECE">Electronics</option>
+                        <option value="EEE">Electrical</option>
+                        <option value="Mechanical">Mechanical</option>
+                        <option value="Civil">Civil</option>
+                    </select>
+
+                    <select id="skillFilter">
+                        <option value="">All Skills</option>
+                        <option value="Java">Java</option>
+                        <option value="Python">Python</option>
+                        <option value="C">C Programming</option>
+                        <option value="HTML & CSS">HTML & CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="UI/UX">UI/UX Design</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="Photography">Photography</option>
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <!-- STUDENT RESULTS -->
+            <section class="students-section">
+
+                <div class="students-heading">
+
+                    <div>
+                        <h2>Students You Can Connect With</h2>
+                        <p>Explore people with skills worth sharing.</p>
+                    </div>
+
+                    <span id="studentCount">0 Students</span>
+
+                </div>
+
+
+                <!-- JavaScript will generate student cards here -->
+                
+<div class="student-grid" id="studentGrid">
+
+    <p id="loadingMessage">
+        Loading students...
+    </p>
+
+</div>
+
+
+            </section>
+
+            
+<!-- EXCHANGE REQUESTS SECTION -->
+
+<section class="requests-section">
+
+    <div class="requests-heading">
+        <h2>Exchange Requests</h2>
+        <p>Manage the skill-exchange requests between students.</p>
+    </div>
+
+    <!-- INCOMING REQUESTS -->
+
+    <div class="request-group">
+
+        <h3>Incoming Requests</h3>
+
+        <div id="incomingRequests" class="request-list">
+            <p class="request-empty">Loading incoming requests...</p>
+        </div>
+
+    </div>
+
+
+    <!-- OUTGOING REQUESTS -->
+
+    <div class="request-group">
+
+        <h3>Sent Requests</h3>
+
+        <div id="outgoingRequests" class="request-list">
+            <p class="request-empty">Loading sent requests...</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+            <!-- FOOTER -->
+            <footer class="explore-footer">
+                <p>© 2026 SkillSwap. Learn Together. Grow Together.</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

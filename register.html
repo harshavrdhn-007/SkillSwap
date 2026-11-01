@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | SkillSwap</title>
+
+    <link rel="stylesheet" href="/skillswapModify/css/auth.css">
+    <!-- <script src="auth.js" defer></script> -->
+</head>
+
+<body>
+
+    <header class="auth-header">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">S</span>
+            Skill<span>Swap</span>
+        </a>
+
+        <a href="index.html" class="back-home">← Back to Home</a>
+    </header>
+
+
+    <main class="auth-container">
+
+        <section class="auth-intro">
+            <span class="auth-tag">JOIN THE COMMUNITY</span>
+
+            <h1>
+                Your next skill
+                journey starts <span>here.</span>
+            </h1>
+
+            <p>
+                Share what you know, discover what you love,
+                and connect with students who believe in
+                learning together.
+            </p>
+
+            <div class="intro-points">
+                <div>✦ Teach skills you already know</div>
+                <div>✦ Discover new learning opportunities</div>
+                <div>✦ Connect with fellow students</div>
+            </div>
+
+            <div class="intro-decoration">Learn. Share. Grow.</div>
+        </section>
+
+
+        <section class="auth-form-section">
+
+            <div class="form-heading">
+                <span class="section-tag">STUDENT REGISTRATION</span>
+                <h2>Create your account</h2>
+                <p>Fill in your details to join SkillSwap.</p>
+            </div>
+
+
+            <form id="registerForm" novalidate>
+
+                <!-- PERSONAL DETAILS -->
+
+                <h3 class="form-subheading">Personal Information</h3>
+
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+                    <small class="error-message" id="nameError"></small>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="example@gmail.com"
+                        autocomplete="email"
+                        required
+                    >
+                    <small class="error-message" id="emailError"></small>
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Minimum 8 characters"
+                            autocomplete="new-password"
+                            required
+                        >
+                        <small class="error-message" id="passwordError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password *</label>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Re-enter password"
+                            autocomplete="new-password"
+                            required
+                        >
+                        <small class="error-message" id="confirmError"></small>
+                    </div>
+
+                </div>
+
+
+                <!-- COLLEGE DETAILS -->
+
+                <h3 class="form-subheading">Academic Information</h3>
+
+                <div class="form-group">
+                    <label for="college">College Name *</label>
+                    <input
+                        type="text"
+                        id="college"
+                        placeholder="Enter your college name"
+                        required
+                    >
+                    <small class="error-message" id="collegeError"></small>
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="department">Department *</label>
+
+                        <select id="department" required>
+                            <option value="">Select Department</option>
+                            <option value="CSE">Computer Science</option>
+                            <option value="IT">Information Technology</option>
+                            <option value="ECE">Electronics & Communication</option>
+                            <option value="EEE">Electrical & Electronics</option>
+                            <option value="Mechanical">Mechanical</option>
+                            <option value="Civil">Civil</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <small class="error-message" id="departmentError"></small>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="year">Study Year *</label>
+
+                        <select id="year" required>
+                            <option value="">Select Year</option>
+                            <option value="1st Year">1st Year</option>
+                            <option value="2nd Year">2nd Year</option>
+                            <option value="3rd Year">3rd Year</option>
+                            <option value="4th Year">4th Year</option>
+                        </select>
+
+                        <small class="error-message" id="yearError"></small>
+                    </div>
+
+                </div>
+
+
+                <!-- SKILLS TO TEACH -->
+
+                <h3 class="form-subheading">Skills I Can Teach</h3>
+
+                <p class="form-hint">
+                    Select the skills you are comfortable teaching.
+                </p>
+
+                <div class="skill-options" id="teachSkills">
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="teach" value="Java">
+                        <span>Java</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="teach" value="Python">
+                        <span>Python</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="teach" value="C Programming">
+                        <span>C Programming</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="teach" value="HTML & CSS">
+                        <span>HTML & CSS</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="teach" value="JavaScript">
+                        <span>JavaScript</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="teach" value="UI/UX Design">
+                        <span>UI/UX Design</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="teach" value="Data Science">
+                        <span>Data Science</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="teach" value="Photography">
+                        <span>Photography</span>
+                    </label>
+
+                </div>
+
+                <small class="error-message" id="teachError"></small>
+
+
+                <!-- SKILLS TO LEARN -->
+
+                <h3 class="form-subheading">Skills I Want to Learn</h3>
+
+                <p class="form-hint">
+                    Select the skills you would like to learn.
+                </p>
+
+                <div class="skill-options" id="learnSkills">
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="learn" value="Java">
+                        <span>Java</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="learn" value="Python">
+                        <span>Python</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="learn" value="C Programming">
+                        <span>C Programming</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="learn" value="HTML & CSS">
+                        <span>HTML & CSS</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="learn" value="JavaScript">
+                        <span>JavaScript</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="learn" value="UI/UX Design">
+                        <span>UI/UX Design</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="learn" value="Data Science">
+                        <span>Data Science</span>
+                    </label>
+
+                    <label class="skill-option">
+                        <input type="checkbox" name="learn" value="Photography">
+                        <span>Photography</span>
+                    </label>
+
+                </div>
+
+                <small class="error-message" id="learnError"></small>
+
+
+                <!-- TERMS -->
+
+                <div class="terms-group">
+                    <label>
+                        <input type="checkbox" id="terms">
+                        <span>
+                            I agree to use SkillSwap respectfully
+                            and share accurate information.
+                        </span>
+                    </label>
+                </div>
+
+                <small class="error-message" id="termsError"></small>
+
+
+                <div id="registerMessage" class="form-message"
+                     role="status" aria-live="polite"></div>
+
+
+                <button type="submit" class="auth-submit">
+                    Create My Account →
+                </button>
+
+                <p class="auth-switch">
+                    Already have an account?
+                    <a href="login.html">Log In</a>
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    
+    <script src="/skillswapModify/js/auth.js" defer></script>
+
+</body>
+</html>

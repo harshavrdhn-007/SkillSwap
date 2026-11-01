@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | SkillSwap</title>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="/skillswapModify/css/dashboard.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="/skillswapModify/js/auth.js" defer></script>
+    <script src="/skillswapModify/js/dashboard.js" defer></script>
+</head>
+
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="logo">
+                <span class="logo-icon">S</span>
+                <span>SkillSwap</span>
+            </div>
+
+            <div class="sidebar-profile">
+
+                <div class="profile-avatar" id="sidebarAvatar">
+                    S
+                </div>
+
+                <div>
+                    <h3 id="sidebarName">Student</h3>
+                    <p>Student Account</p>
+                </div>
+
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <p class="nav-heading">MENU</p>
+
+                <a href="#overview" class="nav-link active">
+                    <span>⌂</span>
+                    Overview
+                </a>
+
+                <a href="#my-skills" class="nav-link">
+                    <span>✦</span>
+                    My Skills
+                </a>
+
+                <a href="#recommended" class="nav-link">
+                    <span>♧</span>
+                    Explore Students
+                </a>
+
+                <a href="#activity" class="nav-link">
+                    <span>◷</span>
+                    Activity
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-help">
+                    <h3>Keep learning!</h3>
+                    <p>Share your knowledge and discover new skills.</p>
+                </div>
+
+                <button class="logout-btn" id="logoutBtn">
+                    <span>↪</span>
+                    Logout
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP HEADER -->
+            <header class="topbar">
+
+                <button class="menu-toggle" id="menuToggle">
+                    ☰
+                </button>
+
+                <div>
+                    <p class="topbar-label">STUDENT PORTAL</p>
+                    <h2>Dashboard</h2>
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="topbar-user">
+                        <div class="small-avatar" id="topAvatar">
+                            S
+                        </div>
+
+                        <span id="topbarName">Student</span>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- OVERVIEW SECTION -->
+            <section class="welcome-section" id="overview">
+
+                <div class="welcome-text">
+
+                    <p class="welcome-label">YOUR SKILL JOURNEY STARTS HERE</p>
+
+                    <h1>
+                        Welcome back,
+                        <span id="welcomeName">Student</span>!
+                    </h1>
+
+                    <p>
+                        Share what you know, learn what you love,
+                        and connect with talented students.
+                    </p>
+
+                </div>
+
+                <div class="welcome-illustration">
+                    <div class="illustration-circle">✦</div>
+                    <div class="illustration-text">
+                        Learn <span>•</span> Teach <span>•</span> Grow
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- STUDENT PROFILE -->
+            <section class="profile-section">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">YOUR PROFILE</p>
+                        <h2>Student Information</h2>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+
+                    <div class="large-avatar" id="profileAvatar">
+                        S
+                    </div>
+
+                    <div class="profile-details">
+
+                        <h2 id="studentName">Student Name</h2>
+
+                        <p id="studentEmail">student@email.com</p>
+
+                        <div class="profile-meta">
+
+                            <span id="studentCollege">College Name</span>
+
+                            <span class="meta-dot">•</span>
+
+                            <span id="studentDepartment">Department</span>
+
+                            <span class="meta-dot">•</span>
+
+                            <span id="studentYear">Study Year</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="profile-status">
+                        <span class="status-dot"></span>
+                        Active Member
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- STATISTICS -->
+            <section class="stats-section">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">YOUR PROGRESS</p>
+                        <h2>Dashboard Overview</h2>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-icon purple">✦</div>
+                        <p>Skills I Teach</p>
+                        <h2 id="teachCount">0</h2>
+                        <span>Skills offered</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon orange">◎</div>
+                        <p>Skills I Want to Learn</p>
+                        <h2 id="learnCount">0</h2>
+                        <span>Learning goals</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">♧</div>
+                        <p>Registered Students</p>
+                        <h2 id="studentCount">0</h2>
+                        <span>Community members</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon blue">✓</div>
+                        <p>Profile Completion</p>
+                        <h2 id="profileCompletion">0%</h2>
+                        <span>Profile information</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- MY SKILLS -->
+            <section class="skills-section" id="my-skills">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">SKILL EXCHANGE</p>
+                        <h2>My Skills</h2>
+                    </div>
+                </div>
+
+                <div class="skills-grid">
+
+                    <div class="skills-card">
+
+                        <div class="skills-card-heading">
+                            <div class="skill-heading-icon teach-icon">↗</div>
+
+                            <div>
+                                <h3>Skills I Can Teach</h3>
+                                <p>Knowledge I can share</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-list" id="teachSkillsList">
+                            <p class="empty-skills">No teaching skills added.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skills-card">
+
+                        <div class="skills-card-heading">
+                            <div class="skill-heading-icon learn-icon">✧</div>
+
+                            <div>
+                                <h3>Skills I Want to Learn</h3>
+                                <p>Skills I want to explore</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-list" id="learnSkillsList">
+                            <p class="empty-skills">No learning skills added.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RECOMMENDED STUDENTS -->
+            <section class="recommended-section" id="recommended">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="section-label">DISCOVER YOUR COMMUNITY</p>
+                        <h2>Recommended Students</h2>
+                        <p class="section-description">
+                            Students who may be a good skill-exchange match for you.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="search-box">
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="studentSearch"
+                        placeholder="Search students, colleges or skills..."
+                    >
+                </div>
+
+                <div class="recommended-grid" id="recommendedStudents">
+
+                    <!-- Student cards are generated by JavaScript -->
+
+                </div>
+
+            </section>
+
+
+            <!-- ACTIVITY -->
+            <section class="activity-section" id="activity">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">YOUR ACCOUNT</p>
+                        <h2>Recent Activity</h2>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+
+                    <div class="activity-icon">✓</div>
+
+                    <div>
+                        <h3>Welcome to SkillSwap!</h3>
+                        <p>
+                            Your student profile is ready.
+                            Start connecting with students and exchanging skills.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="dashboard-footer">
+
+                <p>
+                    © <span id="currentYear"></span> SkillSwap.
+                    Learn Together. Grow Together.
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

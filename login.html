@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | SkillSwap</title>
+
+    <link rel="stylesheet" href="/skillswapModify/css/auth.css">
+    <!-- <script src="auth.js" defer></script> -->
+</head>
+
+<body>
+
+    <header class="auth-header">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">S</span>
+            Skill<span>Swap</span>
+        </a>
+
+        <a href="index.html" class="back-home">← Back to Home</a>
+
+    </header>
+
+
+    <main class="login-container">
+
+        <section class="login-decoration">
+
+            <span class="auth-tag">WELCOME BACK</span>
+
+            <h1>
+                Every connection
+                is a new <span>opportunity.</span>
+            </h1>
+
+            <p>
+                Continue your learning journey.
+                Find students, exchange knowledge
+                and grow your skills with SkillSwap.
+            </p>
+
+            <div class="login-art">
+                <div class="art-circle">✦</div>
+                <div class="art-text">
+                    Learn<br>
+                    Share<br>
+                    Grow.
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="login-form-section">
+
+            <div class="login-form-card">
+
+                <div class="form-heading">
+                    <span class="section-tag">STUDENT LOGIN</span>
+                    <h2>Welcome back!</h2>
+                    <p>Enter your account details to continue.</p>
+                </div>
+
+
+                <form id="loginForm" novalidate>
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <small class="error-message"
+                               id="loginEmailError"></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="loginPassword">Password</label>
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <small class="error-message"
+                               id="loginPasswordError"></small>
+
+                    </div>
+
+
+                    <div class="login-options">
+
+                        <label>
+                            <input type="checkbox" id="rememberMe">
+                            Remember me
+                        </label>
+
+                    </div>
+
+
+                    <div id="loginMessage" class="form-message"
+                         role="status" aria-live="polite"></div>
+
+
+                    <button type="submit" class="auth-submit">
+                        Log In →
+                    </button>
+
+                </form>
+
+
+                <p class="auth-switch">
+                    Don't have an account?
+                    <a href="register.html">Create Account</a>
+                </p>
+
+
+                <div class="login-note">
+                    <span>✦</span>
+                    Your next learning opportunity awaits!
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    
+    <script src="/skillswapModify/js/auth.js" defer></script>
+
+</body>
+</html>
