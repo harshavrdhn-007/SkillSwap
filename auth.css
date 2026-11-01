@@ -1,0 +1,609 @@
+
+/* ====================================
+   1. GLOBAL AUTHENTICATION STYLES
+==================================== */
+
+:root {
+    --primary: #6855e8;
+    --primary-dark: #5140ce;
+    --dark: #19182b;
+    --text: #777489;
+    --border: #e9e6f3;
+    --light: #f8f7ff;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: var(--dark);
+    background: #faf9ff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+/* ====================================
+   2. HEADER
+==================================== */
+
+.auth-header {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'Outfit', Arial, sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo > span:last-child {
+    color: var(--primary);
+    margin-left: -7px;
+}
+
+.logo-icon {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+}
+
+.back-home {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.back-home:hover {
+    color: var(--primary);
+}
+
+
+/* ====================================
+   3. REGISTRATION LAYOUT
+==================================== */
+
+.auth-container {
+    width: min(1150px, 90%);
+    margin: 55px auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 55px;
+    align-items: start;
+}
+
+
+/* ====================================
+   4. LEFT INTRODUCTION PANEL
+==================================== */
+
+.auth-intro {
+    position: sticky;
+    top: 110px;
+    padding: 45px 30px;
+    border-radius: 22px;
+    min-height: 510px;
+    color: white;
+    background: linear-gradient(
+        145deg,
+        #5140ce,
+        #7866ef,
+        #9b8cf8
+    );
+    overflow: hidden;
+}
+
+.auth-tag {
+    display: inline-block;
+    color: #dcd6ff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.auth-intro h1,
+.login-decoration h1 {
+    font-family: 'Outfit', Arial, sans-serif;
+    font-size: clamp(35px, 4vw, 48px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.auth-intro h1 span,
+.login-decoration h1 span {
+    color: #d6ceff;
+}
+
+.auth-intro > p,
+.login-decoration > p {
+    color: #e7e2ff;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-top: 22px;
+}
+
+.intro-points {
+    display: grid;
+    gap: 17px;
+    margin-top: 35px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.intro-decoration {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    font-family: 'Outfit', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* ====================================
+   5. FORM SECTION
+==================================== */
+
+.auth-form-section {
+    padding: 40px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(40,30,90,0.04);
+}
+
+.form-heading {
+    margin-bottom: 32px;
+}
+
+.section-tag {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    margin-bottom: 10px;
+}
+
+.form-heading h2 {
+    font-family: 'Outfit', Arial, sans-serif;
+    font-size: 29px;
+    letter-spacing: -0.5px;
+}
+
+.form-heading p {
+    color: var(--text);
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.form-subheading {
+    font-family: 'Outfit', Arial, sans-serif;
+    font-size: 17px;
+    margin: 30px 0 19px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 17px;
+    min-width: 0;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 46px;
+    padding: 0 13px;
+    border: 1px solid #e4e1ee;
+    border-radius: 8px;
+    background: white;
+    outline: none;
+    font-size: 12px;
+    color: var(--dark);
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(104,85,232,0.1);
+}
+
+.form-group input::placeholder {
+    color: #aaa7b7;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-hint {
+    font-size: 11px;
+    color: var(--text);
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+
+/* ====================================
+   6. SKILL CHECKBOXES
+==================================== */
+
+.skill-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.skill-option {
+    position: relative;
+    cursor: pointer;
+}
+
+.skill-option input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.skill-option span {
+    display: block;
+    padding: 11px 10px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fcfbff;
+    font-size: 11px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.skill-option:hover span {
+    border-color: var(--primary);
+}
+
+.skill-option input:checked + span {
+    color: var(--primary);
+    background: #f0edff;
+    border-color: var(--primary);
+}
+
+.skill-option input:focus-visible + span {
+    outline: 3px solid rgba(104,85,232,0.2);
+}
+
+
+/* ====================================
+   7. TERMS AND VALIDATION
+==================================== */
+
+.terms-group {
+    margin: 22px 0 8px;
+}
+
+.terms-group label {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 11px;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.terms-group input {
+    margin-top: 3px;
+    accent-color: var(--primary);
+}
+
+.error-message {
+    min-height: 0;
+    color: #dc4040;
+    font-size: 10px;
+    display: block;
+}
+
+.form-message {
+    display: none;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 12px;
+}
+
+.form-message.success {
+    display: block;
+    color: #167849;
+    background: #e9f9f0;
+}
+
+.form-message.error {
+    display: block;
+    color: #bc3434;
+    background: #fff0f0;
+}
+
+
+/* ====================================
+   8. SUBMIT BUTTON
+==================================== */
+
+.auth-submit {
+    width: 100%;
+    height: 49px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.auth-submit:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(104,85,232,0.2);
+}
+
+.auth-switch {
+    text-align: center;
+    color: var(--text);
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+.auth-switch a {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+
+/* ====================================
+   9. LOGIN LAYOUT
+==================================== */
+
+.login-container {
+    width: min(1080px, 90%);
+    min-height: 650px;
+    margin: 65px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(40,30,90,0.06);
+}
+
+.login-decoration {
+    position: relative;
+    overflow: hidden;
+    padding: 65px 45px;
+    color: white;
+    background: linear-gradient(
+        145deg,
+        #5140ce,
+        #7866ef,
+        #9b8cf8
+    );
+}
+
+.login-art {
+    position: relative;
+    height: 230px;
+    margin-top: 35px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+}
+
+.art-circle {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-size: 45px;
+    color: #e4dcff;
+}
+
+.art-text {
+    font-family: 'Outfit', Arial, sans-serif;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+
+/* ====================================
+   10. LOGIN FORM
+==================================== */
+
+.login-form-section {
+    display: grid;
+    place-items: center;
+    padding: 45px;
+}
+
+.login-form-card {
+    width: 100%;
+    max-width: 390px;
+}
+
+.login-form-card .form-heading {
+    margin-bottom: 35px;
+}
+
+.login-form-card .form-group {
+    margin-bottom: 23px;
+}
+
+.login-options {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 11px;
+    color: var(--text);
+    margin: 15px 0;
+}
+
+.login-options label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+
+.login-options input {
+    accent-color: var(--primary);
+}
+
+.login-note {
+    margin-top: 35px;
+    padding: 14px;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--primary);
+    background: #f2efff;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* ====================================
+   11. RESPONSIVE DESIGN
+==================================== */
+
+@media (max-width: 900px) {
+
+    .auth-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .auth-intro {
+        position: static;
+        min-height: auto;
+    }
+
+    .intro-decoration {
+        margin-top: 30px;
+    }
+
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+    .login-decoration {
+        padding: 45px;
+    }
+
+    .login-art {
+        height: 170px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .auth-header {
+        padding: 0 5%;
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .auth-container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .auth-intro {
+        padding: 30px 22px;
+    }
+
+    .auth-intro h1,
+    .login-decoration h1 {
+        font-size: 35px;
+    }
+
+    .auth-form-section {
+        padding: 25px 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .skill-options {
+        gap: 8px;
+    }
+
+    .skill-option span {
+        font-size: 10px;
+    }
+
+    .login-container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .login-decoration {
+        padding: 35px 23px;
+    }
+
+    .login-form-section {
+        padding: 30px 20px;
+    }
+
+    .back-home {
+        font-size: 11px;
+    }
+}
